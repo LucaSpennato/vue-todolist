@@ -18,6 +18,7 @@ const app = new Vue(
                     done: false
                 }
             ],
+            message: '',
            
         },
         methods: {
@@ -25,8 +26,16 @@ const app = new Vue(
 
                 this.todos.splice(listElementIndex, 1);
                 
+            },
+
+            newTodoItem: function(){
+
+                this.todos.push({text: this.message, done: false});
+
+                this.message = '';
 
             }
+
         }
 
     },
