@@ -18,7 +18,7 @@ const app = new Vue(
                     done: false
                 }
             ],
-            message: '',
+            newTodoItem: '',
            
         },
         methods: {
@@ -28,25 +28,24 @@ const app = new Vue(
                 
             },
 
-            newTodoItem: function(){
+            newTodoListItem: function(){
 
-                this.todos.push({text: this.message, done: false});
+                if(this.newTodoItem == ''){
 
-                this.message = '';
-
+                }else{
+                    this.todos.push({text: this.newTodoItem, done: false});
+    
+                    this.newTodoItem = '';
+                }
             },
 
             todoDone: function(indexElement){
 
                 this.todos[indexElement].done = !this.todos[indexElement].done;
-                
-                
+                   
             },
-
 
         }
 
     },
 );    
-
-// {'fa-solid fa-check text-success' : todo.done, 'fa-solid fa-x text-danger' : !todo.done}
