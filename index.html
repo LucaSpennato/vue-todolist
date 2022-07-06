@@ -16,12 +16,14 @@
 
         <div class="container">
             <div class="row">
-                <h1 class="col-12 text-center text-success">ToBooList</h1>
+                <h1 class="col-12 text-center text-success my-5">ToBooList</h1>
                 <div class="col-6 m-auto">
 
                     <ul class="list-group">
 
-                        <li class="list-group-item" v-for="(todo, index) in todos" >
+                        <li class="list-group-item"
+                        v-for="(todo, index) in todos"
+                        :class="{'text-decoration-line-through' : todo.done}">
 
                             {{ index }} - {{ todo.text }}
 
