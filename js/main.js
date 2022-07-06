@@ -1,7 +1,7 @@
 
 const app = new Vue(
     {
-        
+
         el: '#app',
         data: {
             todos: [
@@ -19,6 +19,14 @@ const app = new Vue(
                 }
             ]
         },
+        methods: {
+            todoDone: function(listElement){
+
+                console.log(listElement)
+                listElement = !listElement;
+                
+            }
+        }
 
     },
 );    

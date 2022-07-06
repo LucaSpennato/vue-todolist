@@ -33,7 +33,7 @@
                             </div>
 
                             <div>
-                                <a href="#" @click.prevent="">
+                                <a href="#" @click.prevent="todoDone(todo.done)">
                                     <i :class="{'fa-solid fa-check text-success' : todo.done, 'fa-solid fa-x text-danger' : !todo.done}"></i>
                                     
                                 </a>
