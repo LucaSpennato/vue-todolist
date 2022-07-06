@@ -22,7 +22,7 @@ const app = new Vue(
            
         },
         methods: {
-            todoDone: function(listElementIndex){
+            todoDelete: function(listElementIndex){
 
                 this.todos.splice(listElementIndex, 1);
                 
@@ -35,6 +35,8 @@ const app = new Vue(
                 this.message = '';
 
             }
+
+
 
         }
 
