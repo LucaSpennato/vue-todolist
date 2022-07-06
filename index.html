@@ -32,7 +32,8 @@
 
                         <li class="list-group-item d-flex justify-content-between" v-for="(todo, index) in todos">
 
-                            <div :class="{'text-decoration-line-through' : todo.done}" @click="todoDone(index)">
+                            <div :class="{'text-decoration-line-through text-secondary' : todo.done}"
+                                @click="todoDone(index)">
                                 {{ index }} - {{ todo.text }}
                             </div>
 
@@ -43,20 +44,25 @@
                             </div>
 
                         </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <!-- <h5 class="text-primary">Inserisci le tue note</h5> -->
+
+                            <div>
+                                <input type="text" v-model="message" @keyUp.enter="newTodoItem()">
+                            </div>
+
+                            <button class="btn" @click="newTodoItem"><i class="fa-solid fa-paper-plane text-success"></i></button>
+                        </li>
 
                     </ul>
 
                 </div>
 
 
-                <div class="col-6 offset-3 my-3">
+                <!-- <div class="col-6 offset-3 my-3">
 
-                    <h5 class="text-primary" >Inserisci le tue note</h5>
 
-                    <input type="text" v-model="message" @keyUp.enter="newTodoItem()">
-
-                    <button class="btn btn-primary" @click="newTodoItem">Invia</button>
-                </div>
+                </div> -->
 
 
             </div>
