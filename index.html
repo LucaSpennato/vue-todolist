@@ -33,10 +33,10 @@
                             </div>
 
                             <div>
-                                <a href="#" @click.prevent="todoDone(todo.done)">
-                                    <i :class="{'fa-solid fa-check text-success' : todo.done, 'fa-solid fa-x text-danger' : !todo.done}"></i>
+                                <button class="btn" @click="todoDone(index)">
+                                    <i class="fa-solid fa-x text-danger"></i>
                                     
-                                </a>
+                                </button>
                             </div>
 
                         </li>

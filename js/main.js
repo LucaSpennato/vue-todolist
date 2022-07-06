@@ -17,16 +17,20 @@ const app = new Vue(
                     text: 'Fare il bucato',
                     done: false
                 }
-            ]
+            ],
+           
         },
         methods: {
-            todoDone: function(listElement){
+            todoDone: function(listElementIndex){
 
-                console.log(listElement)
-                listElement = !listElement;
+                this.todos.splice(listElementIndex, 1);
                 
+
             }
         }
 
     },
 );    
+
+// this.todos[listElementIndex] = !this.todos[listElementIndex];
+// {'fa-solid fa-check text-success' : todo.done, 'fa-solid fa-x text-danger' : !todo.done}
