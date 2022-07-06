@@ -32,7 +32,7 @@
 
                         <li class="list-group-item d-flex justify-content-between" v-for="(todo, index) in todos">
 
-                            <div :class="{'text-decoration-line-through' : todo.done}">
+                            <div :class="{'text-decoration-line-through' : todo.done}" @click="todoDone(index)">
                                 {{ index }} - {{ todo.text }}
                             </div>
 

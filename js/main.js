@@ -34,8 +34,14 @@ const app = new Vue(
 
                 this.message = '';
 
-            }
+            },
 
+            todoDone: function(indexElement){
+
+                this.todos[indexElement].done = !this.todos[indexElement].done;
+                
+                
+            },
 
 
         }
@@ -43,5 +49,4 @@ const app = new Vue(
     },
 );    
 
-// this.todos[listElementIndex] = !this.todos[listElementIndex];
 // {'fa-solid fa-check text-success' : todo.done, 'fa-solid fa-x text-danger' : !todo.done}
