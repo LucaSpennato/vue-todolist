@@ -21,11 +21,14 @@
 
                     <ul class="list-group">
 
-                        <li class="list-group-item"
-                        v-for="(todo, index) in todos"
-                        :class="{'text-decoration-line-through' : todo.done}">
+                        <li class="list-group-item d-flex justify-content-between"
+                        v-for="(todo, index) in todos">
 
-                            {{ index }} - {{ todo.text }}
+                            <div :class="{'text-decoration-line-through' : todo.done}">
+                                {{ index }} - {{ todo.text }}
+                            </div>
+
+                            <div>x</div>
 
                         </li>
 
